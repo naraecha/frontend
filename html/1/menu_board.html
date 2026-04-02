@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>랜덤 메뉴 추천판</title>
+</head>
+<!--	id="..."	:	페이지	내부	이동	목적지	이름표
+title="..."	:	마우스	올리면	툴팁
+border="1"	:	표	테두리(연습용)
+scope="col|row"	:	th가	열/행	제목인지	표시
+colspan="2"	:	표	가로칸	합치기-->
+<body>
+    <h1 id="top">오늘 뭐 먹지?</h1>
+    <p title="목록과 표를 같이 쓰는 연습">아래 후보 중에서 하나 골라보자!</p>
+    <hr>
+    <h2>후보(ul)</h2>
+    <ul>
+        <li>김치찌개</li>
+        <li>돈까스</li>
+        <li>국밥</li>
+        <li>비빔밥</li>
+    </ul>
+    <h2	id="table">추천표(table)</h2>
+    <table	border="1">
+ 	 	<tr>
+ 	 	 	<th	scope="col">카테고리</th>
+ 	 	 	<th	scope="col">메뉴</th>
+ 	 	 	<th	scope="col">난이도</th>
+ 	 	</tr>
+ 	 	<tr>
+ 	 	 	<th	scope="row">한식</th>
+ 	 	 	<td>김치찌개</td>
+ 	 	 	<td>쉬움</td>
+ 	 	</tr>
+ 	 	<tr>
+ 	 	 	<th	scope="row">분식</th>
+ 	 	 	<td>돈까스</td>
+ 	 	 	<td>보통</td>
+ 	 	</tr>
+ 	 	<tr>
+ 	 	 	<th	scope="row">국물</th>
+ 	 	 	<td	colspan="2">국밥(든든함)</td>
+ 	 	</tr>
+ 	</table>
+ 	<p><a href="#top"title="맨 위로">맨 위로</a></p>
+</body>
+</html>

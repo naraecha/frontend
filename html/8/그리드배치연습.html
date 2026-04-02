@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    .container {
+      display: grid;
+      width: 700px;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 100px);
+      grid-template-areas: 
+      "logo title title title menu"
+      "a1 a1 content content content"
+      "a2 a2 content content content"
+      "a3 a3 content content content"
+      "b1 b2 b2 b2 b3";
+      color: white;
+      gap: 4px;
+    }
+    #logo {
+      grid-area: logo;
+      background-color: orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #title {
+      grid-area: title;
+      background-color: orangered;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu {
+      grid-area: menu;
+      background-color: orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #a1 {
+      grid-area: a1;
+      background-color: #1866db;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #a2 {
+      grid-area: a2;
+      background-color: #3c7ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #a3 {
+      grid-area: a3;
+      background-color: #6f9ce0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #content {
+      grid-area: content;
+      background-color: rgb(109, 184, 109);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #b1 {
+      grid-area: b1;
+      background-color: gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #b2 {
+      grid-area: b2;
+      background-color: rgb(59, 59, 59);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #b3 {
+      grid-area: b3;
+      background-color: gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p id="logo">로고</p>
+    <p id="title">타이틀을 넣어 주세요.</p>
+    <p id="menu">햄버거메뉴</p>
+    <p id="a1">섹션1</p>
+    <p id="a2">섹션2</p>
+    <p id="a3">섹션3</p>
+    <p id="content">컨텐츠 영역</p>
+    <p id="b1">약관및 정책</p>
+    <p id="b2">회사 정보</p>
+    <p id="b3">기타</p>
+  </div>
+</body>
+</html>

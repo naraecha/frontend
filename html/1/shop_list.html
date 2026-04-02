@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+ 	<meta charset="utf-8">
+ 	<title>상품	리스트</title>
+</head>
+<!--src="./image/item1.jpg"	: 이미지 파일 위치
+alt="..." : 이미지가 안	뜰 때 대신 표시	+ 접근성
+width="120"	: 이미지 가로 크기(html	연습용 실제는 거의 css)-->
+<body>
+ 	<h1 id="top">오늘의	특가</h1>
+ 	<p title="img와	table을	같이 쓰는 연습">이미지 + 표로 상품을 정리해봅시다.</p>
+ 	<hr>
+ 	<ul>
+ 	 	<li><a href="#p1"title="상품1로	이동">상품 1</a></li>
+ 	 	<li><a href="#p2"title="상품2로	이동">상품 2</a></li>
+ 	</ul>
+ 	<h2 id="p1">상품 1</h2>
+ 	<table border="1">
+ 	 	<tr>
+ 	 	 	<th scope="col">사진</th>
+ 	 	 	<th scope="col">이름</th>
+ 	 	 	<th scope="col">설명</th>
+ 	 	</tr>
+ 	 	<tr>
+ 	 	 	<td><img src="./image/item1.jpg"alt="상품1	사진"width="120"></td>
+ 	 	 	<td>무선 마우스</td>
+ 	 	 	<td>조용하고 가벼움</td>
+        </tr>
+ 	</table>
+ 	<h2 id="p2">상품 2</h2>
+ 	<table border="1">
+ 	 	<tr>
+ 	 	 	<th scope="col">사진</th>
+ 	 	 	<th scope="col">이름</th>
+ 	 	 	<th scope="col">설명</th>
+ 	 	</tr>
+ 	 	<tr>
+ 	 	 	<td><img src="./image/item2.jpg"alt="상품2 사진"width="120"></td>
+ 	 	 	<td>키보드</td>
+ 	 	 	<td>타건감 좋음</td>
+ 	 	</tr>
+ 	</table>
+ 	<p><a href="#top">맨 위로</a></p>
+</body>
+</html>

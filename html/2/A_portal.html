@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>시맨틱 포털</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="top">시맨틱 포털</h1>
+            <p>오늘은 한 페이지에 구조를 모두 합칩니다.</p>
+        </header>
+        <hr>
+        <nav>
+            <p>메뉴</p>
+            <ul>
+                <li><a href="#notice" title="공지로 이동">공지</a></li>
+                <li><a href="#gallery" title="갤러리로 이동">갤러리</a></li>
+                <li><a href="#contact" title="연락처로 이동">연락처</a></li>
+                <li><a href="#schedule" title="시간표로 이동">시간표</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <main>
+            <section id="notice">
+                <h3>공지</h3>
+                <p>1) nav 메뉴를 누르면 해당 section으로 이동합니다.<br>
+                   2) 각 section 아래에는 "맨 위로" 링크가 있습니다.</section></p>
+                <p><a href="#top" title="맨 위로">맨 위로</a></p>
+            </section>
+            <hr>
+            <section id="gallery">
+                <h3>갤러리</h3>
+                <p>이미지 2장을 넣고, 경로와 alt를 확인합니다.</p>
+                <img src="./image/pic1.jpg" alt="이미지1">
+                <img src="./image/pic2.jpg" alt="이미지2">
+                <p><a href="#top">맨 위로</a></p>
+            </section>
+            <hr>
+            <section id="contact">
+                <h3>연락처</h3>
+                <p>table로 정보를 정리합니다.</p>
+                <table border="1">
+                    <tr>
+                        <th>전화</th>
+                        <td>010-0000-0000</td>
+                    </tr>
+                    <tr>
+                        <th>이메일</th>
+                        <td>example@example.com</td>
+                    </tr>
+                    <tr>
+                        <th>주소</th>
+                        <td>서울시 어딘가</td>
+                    </tr>
+                </table>
+                <p><a href="#top">맨 위로</a></p>
+            </section>
+            <hr>
+            <section id="schedule">
+                <h3>시간표</h3>
+                <p>열 제목(th)에는 scope="col"을 붙여봅니다.</p>
+                <table border="1">
+                    <tr>
+                        <th scope="col">시간</th>
+                        <th scope="col">내용</th>
+                        <th scope="col">비고</th>
+                    </tr>
+                    <tr>
+                        <th>9:00</th>
+                        <td>HTML 구조</td>
+                        <td>시맨틱</td>
+                    </tr>
+                    <tr>
+                        <th>10:00</th>
+                        <td>폼 맛보기</td>
+                        <td>label/input</td>
+                    </tr>
+                    <tr>
+                        <th>11:00</th>
+                        <td>미디어</td>
+                        <td>audio/video</td>
+                    </tr>
+                </table>
+                <p><a href="#top">맨 위로</a></p>
+            </section>
+        </main>
+        <hr>
+        <footer>
+        <p>© 2026 포털 페이지</p>
+        </footer>
+    </body>
+</html>

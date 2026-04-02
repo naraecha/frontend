@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Practice</title>
+
+<style>
+  body {
+    margin: 10px;
+    background: #ddd;
+  }
+
+  header, main, aside, footer {
+    padding: 20px;
+  }
+
+  header {
+    background: linear-gradient(90deg, #1e1e3f, #2c2c5e);
+    text-align: center;
+    margin: 10px;
+  }
+
+  header h1 {
+    font-size: 32px;
+    letter-spacing: -0.03em;
+    color: white;
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  aside {
+    width: 200px;
+    background: #384a87;
+    color: white;
+    margin: 10px;
+    border-right: 1px solid #222;
+    text-align: center;
+  }
+
+  main {
+    flex: 1;
+    background: #c0392b;
+    padding: 32px;
+    box-sizing: border-box;
+    color: white;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .cards {
+    display: flex;
+  }
+
+  .card {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+  }
+
+  .card:nth-child(2n) {
+    background: goldenrod;
+    color: black;
+  }
+
+  .card:nth-child(odd) {
+    background: gray;
+    color: white;
+  }
+
+
+  footer {
+    background: #1c1c35;
+    color: white;
+    text-align: center;
+    margin: 10px;
+  }
+
+  footer::before {
+    content: "•••";
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 8px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>HEADER - gradient background</h1>
+</header>
+
+<div class="container">
+  <aside>
+    <h2>ASIDE</h2>
+    sidebar<br>
+    width: 200px
+  </aside>
+
+  <main>
+    <h2>MAIN CONTENT</h2>
+    padding: 32px<br>
+    box-sizing: border-box
+  </main>
+</div>
+
+<div class="cards">
+  <div class="card">CARD (odd)</div>
+  <div class="card">CARD (even)</div>
+</div>
+
+<footer>
+  FOOTER - dark background · ::before 장식
+</footer>
+
+</body>
+</html>

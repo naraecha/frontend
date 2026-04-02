@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+ 	<meta charset="utf-8">
+ 	<title>급식표</title>
+</head>
+<body>
+ 	<h1>급식표(표 병합 연습)</h1>
+ 	<p>rowspan은 세로 합치기, colspan은	가로 합치기입니다.</p>
+ 	<hr>
+ 	<table border="1">
+ 	 	<tr>
+ 	 	 	<th scope="col">요일</th>
+ 	 	 	<th scope="col">메뉴</th>
+ 	 	 	<th scope="col">비고</th>
+ 	 	</tr>
+ 	 	<tr>
+ 	 	 	<th scope="row"rowspan="2">월</th>
+ 	 	 	<td>제육볶음</td>
+ 	 	 	<td>매움</td>
+ 	 	</tr>
+ 	 	<tr>
+ 	 	 	<td colspan="2">후식: 과일(가로	합침)</td>
+ 	 	</tr>
+ 	 	<tr>
+ 	 	 	<th scope="row">화</th>
+ 	 	 	<td>카레</td>
+ 	 	 	<td>보통</td>
+ 	 	</tr>
+    </table>
+</body>
+</html>

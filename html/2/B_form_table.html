@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>설문 UI 만들기</title>
+    </head>
+    <body>
+        <h1>설문 UI 만들기</h1>
+        <p>form은 입력 UI를 묶는 태그입니다. 전송은 지금은 의미 없고, "입력 구성"이 목표입니다.</p>
+        <hr>
+        <form action="#" method="get">
+        <table border="1">
+            <tr>
+                <th>질문</th>
+                <th>입력</th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="name">이름</label>
+                </th>
+                <td>
+                    <input type="text" id="name" name="name">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="email">이메일</label>
+                </th>
+                <td>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com">
+                </td>
+            </tr>
+            <tr>
+                <th>관심 분야(라디오)</th>
+                <td>
+                    <input type="radio" id="front" name="field" value="front" checked>
+                    <label for="front">프론트</label>
+
+                    <input type="radio" id="back" name="field" value="back">
+                    <label for="back">백엔드</label>
+
+                    <input type="radio" id="ai" name="field" value="ai">
+                    <label for="ai">AI</label>
+                </td>
+            </tr>
+            <tr>
+                <th>약관 동의</th>
+                <td>
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">동의합니다(필수)</label>
+                </td>
+            </tr>
+            <tr>
+                <th>제출</th>
+                <td>
+                    <input type="submit" value="제출하기">
+                </td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
