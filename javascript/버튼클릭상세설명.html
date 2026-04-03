@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 300px;
+      position: relative;
+    }
+    .a button {
+      position: absolute;
+      top: 238px;
+      left: 15px;
+      background-color: hsla(0, 0%, 94%, .65);
+      height: 30px;
+      padding-bottom: 4px;
+    }
+    .b button {
+      background-color: hsla(0, 0%, 94%, .65);
+      height: 30px;
+      padding-bottom: 4px;
+      border: 1px solid rgb(190, 190, 190);
+    }
+    .b {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/javascript/img/잇지.jpeg" alt="">
+
+  </div>
+  <div class="a">
+    <button onclick="open1()">상세 설명 보기</button>
+  </div>
+  <div class="b">
+    <h4>그룹 잇지</h4>
+    <p>ㅁㄴㅇ</p>
+    <button onclick="close1()">상세 설명 닫기</button>
+  </div>
+  <script>
+    function open1() {
+      const open = document.querySelector(".a");
+      const close = document.querySelector(".b");
+      open.style.display = "none";
+      close.style.display = "block";
+    }
+    function close1() {
+      const open = document.querySelector(".a");
+      const close = document.querySelector(".b");
+      open.style.display = "block";
+      close.style.display = "none";
+    }
+  </script>
+</body>
+</html>

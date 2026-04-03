@@ -27,3 +27,59 @@ console.log(arr);
 const fruits = ["딸기", "사과", "배", "바나나"];
 const newFruits = fruits.concat("오렌지");
 console.log(newFruits);
+
+// 전개연산자를 사용하는 방법
+const newFruits2 = [...newFruits, "키위"];
+console.log(newFruits2);
+
+// sort() : 오름차순 정렬
+console.log(newFruits2.sort());
+
+// filter() : 배열에서 조건을 만족하는 배열의 요소만 찾아서 새로운 배열 생성, 비파괴적 메서드
+const persons = [
+  {
+    name: "안유진",
+    score: 90,
+    city: "대전"
+  },
+  {
+    name: "장원영",
+    score: 92,
+    city: "인천"
+  },
+  {
+    name: "이서",
+    score: 80,
+    city: "서울"
+  },
+  {
+    name: "가을",
+    score: 77,
+    city: "서울"
+  },
+  {
+    name: "레이",
+    score: 60,
+    city: "일본"
+  },
+];
+
+// 성적이 90점 이상만 골라내기
+const passPersons = persons.filter(e => e.score >= 90);
+console.log(passPersons);
+
+// 도시가 서울인 배열 객체가 골라내기
+const cityPersons = persons.filter(e => e.city === "서울");
+console.log(cityPersons);
+
+// map() : 배열의 모든 요소를 반환하여 새 배열을 반환, 원본을 변경하지 않음(비파괴적)
+const numbers = [1, 2, 3, 4, 5];
+const squared = numbers.map(e => e * e);
+console.log(squared);
+
+// 배열로 구성된 객체에서 이름만 추출하기
+const names = persons.map(e => e.name);
+console.log(names);
+
+const city = persons.map(e => e.city);
+console.log(city);

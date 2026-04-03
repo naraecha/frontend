@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container button {
+      border-radius: 0;
+      border: 0;
+      width: 100px;
+      height: 30px;
+      margin-bottom: 30px;
+      color: white;
+    }
+    .green {
+      background-color: green;
+    }
+    .orange {
+      background-color: orange;
+    }
+    .purple {
+      background-color: purple;
+    }
+
+    #box {
+      border: 1px solid;
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="green" onclick="btn('green')">Green</button>
+    <button class="orange" onclick="btn('orange')">Orange</button>
+    <button class="purple" onclick="btn('purple')">Purple</button>
+  </div>
+  
+  <div id="box"></div>
+  <script>
+    function btn(color) {
+      const box = document.querySelector("#box");
+      box.style.background = color;
+    }
+  </script>
+</body>
+</html>
