@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      margin: 30px auto;
+      background-color: rgb(234, 238, 238);
+    }
+    .container {
+      width: 500px;
+      height: 700px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px hsla(0, 0%, 7%, .20);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 {
+      margin-top: 0px;
+      margin-bottom: 40px;
+    }
+    input {
+      width: 440px;
+      height: 45px;
+      border: 1px solid rgb(201, 201, 201);
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+    .b {
+      display: flex;
+      flex-direction: column;
+      gap: 25px
+    }
+    .input-box {
+      position: relative;
+
+    }
+    .p1 {
+      color: rgb(67, 184, 96);
+      font-weight: 500;
+    }
+    .p2 {
+      color: rgb(235, 122, 122);
+      font-weight: 500;
+    }
+    p {
+      position: absolute;
+      top: 29px;
+      right: 3px;
+      font-size: 15.5px;
+      display: none;
+    }
+    button {
+      margin-top: 30px;
+      width: 100%;
+      height: 45px;
+      border: 0;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .c {
+      display: flex;
+      width: 440px;
+      gap: 10px;
+    }
+    .btn {
+      background-color: rgb(38, 150, 224);
+    }
+    .cancel {
+      background-color: rgb(190, 190, 190);
+    }
+    button:disabled {
+      background-color: gray;
+      cursor: default;
+    }
+    .in5 {
+      height: 100px;
+      border-radius: 7px;
+      box-sizing: border-box;
+      width: 440px;
+      resize: none;
+      border: 1px solid rgb(201, 201, 201);
+      padding: 10px;
+    }
+    .agree-box {
+      width: 440px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .agree {
+      margin: 0;
+      width: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="a">
+      <h1>회원 가입</h1>
+    </div>
+    <div class="b">
+      <div class="input-box">
+        <input type="text" class="in1" placeholder="아이디 입력 *">
+        <p class="p1">사용 가능 합니다.</p>
+        <p class="p2">입력 조건이 맞지 않습니다.</p>
+      </div>
+      <div class="input-box">  
+        <input type="password" class="in2" placeholder="비밀번호 입력 * ( 9~20자, 특수문자 / 대소문자 포함 )">
+        <p class="p1">사용 가능 합니다.</p>
+        <p class="p2">입력 조건이 맞지 않습니다.</p>
+      </div>
+      <div class="input-box">
+        <input type="password" class="in3" placeholder="비밀번호 확인 *">
+        <p class="p1">사용 가능 합니다.</p>
+        <p class="p2">입력 조건이 맞지 않습니다.</p>
+      </div>
+      <div class="input-box">
+        <input type="text" class="in4" placeholder="닉네임 입력 *">
+        <p class="p1">사용 가능 합니다.</p>
+        <p class="p2">입력 조건이 맞지 않습니다.</p>
+      </div>
+      <div class="input-box">
+        <textarea class="in5" placeholder="가입 목적 입력 (여러 줄 입력 가능)"></textarea>
+      </div>
+      <div class="agree-box">
+        <input type="checkbox" class="agree">
+        <label>개인정보 제공 동의 (필수)</label>
+      </div>
+    </div>
+    <div class="c">
+      <button class="btn">가입</button>
+      <button class="cancel">취소</button>
+    </div>
+  </div>
+  <script>
+    const id = document.querySelector(".in1");
+    const pw = document.querySelector(".in2");
+    const pwCheck = document.querySelector(".in3");
+    const nickname = document.querySelector(".in4");
+
+    const idRegEx = /^[a-zA-Z0-9_]+$/;
+    id.addEventListener("input", () => {
+      const box = id.parentElement;
+      const success = box.querySelector(".p1");
+      const error = box.querySelector(".p2");
+
+      if (idRegEx.test(id.value)) {
+        success.style.display = "block";
+        error.style.display = "none";
+      } else {
+        success.style.display = "none";
+        error.style.display = "block";
+      }
+    });
+
+    const pwRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+    pw.addEventListener("input", () => {
+      const box = pw.parentElement;
+      const success = box.querySelector(".p1");
+      const error = box.querySelector(".p2");
+
+      if (pwRegEx.test(pw.value)) {
+        success.style.display = "block";
+        error.style.display = "none";
+      } else {
+        success.style.display = "none";
+        error.style.display = "block";
+      }
+    });
+
+    pwCheck.addEventListener("input", () => {
+      const box = pwCheck.parentElement;
+      const success = box.querySelector(".p1");
+      const error = box.querySelector(".p2");
+
+      if (pw.value === pwCheck.value && pwCheck.value !== "") {
+        success.style.display = "block";
+        error.style.display = "none";
+      } else {
+        success.style.display = "none";
+        error.style.display = "block";
+      }
+    });
+
+    const agree = document.querySelector(".agree");
+    const button = document.querySelector(".btn");
+    button.disabled = true;
+
+    function checkAllValid() {
+      const idValid = idRegEx.test(id.value);
+      const pwValid = pwRegEx.test(pw.value);
+      const pwCheckValid = pw.value === pwCheck.value && pwCheck.value !== "";
+      const nicknameValid = nickname.value.trim() !== "";
+      const agreeValid = agree.checked;
+
+      if (idValid && pwValid && pwCheckValid && nicknameValid && agreeValid) {
+        button.disabled = false;
+      } else {
+        button.disabled = true;
+      }
+    }
+
+    agree.addEventListener("change", checkAllValid);
+    id.addEventListener("input", checkAllValid);
+    pw.addEventListener("input", checkAllValid);
+    pwCheck.addEventListener("input", checkAllValid);
+    nickname.addEventListener("input", checkAllValid);
+  </script>
+</body>
+</html>
