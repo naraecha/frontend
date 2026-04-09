@@ -1,7 +1,10 @@
 // 이름, 전화번호, 나이, 직업으로 구성된 10개의 배열을 생성
 // table 형태로 구성 해 출력
 // map 사용
-import { useState } from "react";
+
+// 마운트 시점에 서버에서 가져오는 것처럼 구현해보기
+// 특정 시점에 회원정보 가져오기, 가져오기 버튼 생성하고 버튼을 누르면 회원정보를 가져와서 보여주기
+import { useState, useEffect } from "react";
 import "./App.css";
 
 const members = [
@@ -18,14 +21,31 @@ const members = [
 ];
 
 const Table = () => {
-  const [data, setData] = useState(members);
+  const [data, setData] = useState([]);
+  const [loding, setLoding] = useState(false); // 서버에서 데이터가 내려올 때 시간이 걸리는 경우 로딩 중 표시
 
   const handleTableRowClick = (member) => {
     alert(`${member.name} 이 눌러졌습니다.`);
   }
 
+  // useEffect(() => {
+  //   setData(members);
+  // }, []);
+
+  const fetchData = () => {
+    // 실제 서버에서 데이터가 들어오는 것처럼 시뮬레이션
+    setLoding(true);
+    setTimeout(() => {
+      setData(members);
+      setLoding(false);
+    }, 1500)
+  }
+
   return (
-    <table>
+    <div>
+      <button onClick={fetchData}>회원정보 가져오기</button>
+      {loding && "서버에서 데이터를 가져오는 중......."}
+      <table>
       <thead>
         <tr>
           <th>번호</th>
@@ -36,7 +56,7 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-        {data && members.map((person) => (
+        {data.map((person) => (
           <tr key={person.id} onClick={() => handleTableRowClick(person)}>
             <td>{person.id}</td>
             <td>{person.name}</td>
@@ -46,7 +66,9 @@ const Table = () => {
           </tr>
         ))}
       </tbody>
-    </table>
+      </table>
+    </div>
+    
   );
 };
 

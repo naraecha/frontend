@@ -1,10 +1,10 @@
 import "./App.css";
-import Table from "./Table";
+import StyleEx from "./StyleEx";
 
 function App() {
   return (
     <>
-      <Table />
+      <StyleEx />
     </>
   );
 }
